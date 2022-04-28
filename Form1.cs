@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace RPNCalc
 {
-    public partial class Form1 : Form
+    public partial class FormMainCalc : Form
     {
-        public Form1()
+        public FormMainCalc()
         {
             InitializeComponent();
+        }
+
+        private void listBoxRowsValues_DrawItem(object sender, DrawItemEventArgs e)
+        {
+
         }
     }
 }

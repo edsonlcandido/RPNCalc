@@ -35,7 +35,7 @@ namespace RPNCalc
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonNum0 = new System.Windows.Forms.Button();
             this.buttonComma = new System.Windows.Forms.Button();
-            this.buttonSum = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonNum3 = new System.Windows.Forms.Button();
             this.buttonNum2 = new System.Windows.Forms.Button();
             this.buttonNum1 = new System.Windows.Forms.Button();
@@ -43,11 +43,11 @@ namespace RPNCalc
             this.buttonNum6 = new System.Windows.Forms.Button();
             this.buttonNum5 = new System.Windows.Forms.Button();
             this.buttonNum4 = new System.Windows.Forms.Button();
-            this.buttonMultiplicator = new System.Windows.Forms.Button();
+            this.buttonMultiply = new System.Windows.Forms.Button();
             this.buttonNum9 = new System.Windows.Forms.Button();
             this.buttonNum8 = new System.Windows.Forms.Button();
             this.buttonNum7 = new System.Windows.Forms.Button();
-            this.buttonDivision = new System.Windows.Forms.Button();
+            this.buttonDivide = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -86,7 +86,7 @@ namespace RPNCalc
             this.tableLayoutPanelKeys.Controls.Add(this.buttonClear, 2, 4);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum0, 1, 4);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonComma, 0, 4);
-            this.tableLayoutPanelKeys.Controls.Add(this.buttonSum, 3, 3);
+            this.tableLayoutPanelKeys.Controls.Add(this.buttonAdd, 3, 3);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum3, 2, 3);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum2, 1, 3);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum1, 0, 3);
@@ -94,11 +94,11 @@ namespace RPNCalc
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum6, 2, 2);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum5, 1, 2);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum4, 0, 2);
-            this.tableLayoutPanelKeys.Controls.Add(this.buttonMultiplicator, 3, 1);
+            this.tableLayoutPanelKeys.Controls.Add(this.buttonMultiply, 3, 1);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum9, 2, 1);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum8, 1, 1);
             this.tableLayoutPanelKeys.Controls.Add(this.buttonNum7, 0, 1);
-            this.tableLayoutPanelKeys.Controls.Add(this.buttonDivision, 3, 0);
+            this.tableLayoutPanelKeys.Controls.Add(this.buttonDivide, 3, 0);
             this.tableLayoutPanelKeys.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanelKeys.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanelKeys.Controls.Add(this.button1, 0, 0);
@@ -128,6 +128,7 @@ namespace RPNCalc
             this.buttonEnter.TabIndex = 19;
             this.buttonEnter.Text = "ENTER";
             this.buttonEnter.UseVisualStyleBackColor = false;
+            this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
             // buttonClear
             // 
@@ -175,21 +176,22 @@ namespace RPNCalc
             this.buttonComma.Text = ",";
             this.buttonComma.UseVisualStyleBackColor = false;
             // 
-            // buttonSum
+            // buttonAdd
             // 
-            this.buttonSum.AutoSize = true;
-            this.buttonSum.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.buttonSum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSum.FlatAppearance.BorderSize = 0;
-            this.buttonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSum.ForeColor = System.Drawing.Color.White;
-            this.buttonSum.Location = new System.Drawing.Point(255, 210);
-            this.buttonSum.Name = "buttonSum";
-            this.buttonSum.Size = new System.Drawing.Size(80, 63);
-            this.buttonSum.TabIndex = 15;
-            this.buttonSum.Text = "+";
-            this.buttonSum.UseVisualStyleBackColor = false;
+            this.buttonAdd.AutoSize = true;
+            this.buttonAdd.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAdd.FlatAppearance.BorderSize = 0;
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.ForeColor = System.Drawing.Color.White;
+            this.buttonAdd.Location = new System.Drawing.Point(255, 210);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(80, 63);
+            this.buttonAdd.TabIndex = 15;
+            this.buttonAdd.Text = "+";
+            this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.operatorButton_Click);
             // 
             // buttonNum3
             // 
@@ -254,6 +256,7 @@ namespace RPNCalc
             this.buttonSubtract.TabIndex = 11;
             this.buttonSubtract.Text = "-";
             this.buttonSubtract.UseVisualStyleBackColor = false;
+            this.buttonSubtract.Click += new System.EventHandler(this.operatorButton_Click);
             // 
             // buttonNum6
             // 
@@ -303,21 +306,22 @@ namespace RPNCalc
             this.buttonNum4.UseVisualStyleBackColor = false;
             this.buttonNum4.Click += new System.EventHandler(this.numButton_Click);
             // 
-            // buttonMultiplicator
+            // buttonMultiply
             // 
-            this.buttonMultiplicator.AutoSize = true;
-            this.buttonMultiplicator.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.buttonMultiplicator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonMultiplicator.FlatAppearance.BorderSize = 0;
-            this.buttonMultiplicator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMultiplicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMultiplicator.ForeColor = System.Drawing.Color.White;
-            this.buttonMultiplicator.Location = new System.Drawing.Point(255, 72);
-            this.buttonMultiplicator.Name = "buttonMultiplicator";
-            this.buttonMultiplicator.Size = new System.Drawing.Size(80, 63);
-            this.buttonMultiplicator.TabIndex = 7;
-            this.buttonMultiplicator.Text = "*";
-            this.buttonMultiplicator.UseVisualStyleBackColor = false;
+            this.buttonMultiply.AutoSize = true;
+            this.buttonMultiply.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.buttonMultiply.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonMultiply.FlatAppearance.BorderSize = 0;
+            this.buttonMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMultiply.ForeColor = System.Drawing.Color.White;
+            this.buttonMultiply.Location = new System.Drawing.Point(255, 72);
+            this.buttonMultiply.Name = "buttonMultiply";
+            this.buttonMultiply.Size = new System.Drawing.Size(80, 63);
+            this.buttonMultiply.TabIndex = 7;
+            this.buttonMultiply.Text = "*";
+            this.buttonMultiply.UseVisualStyleBackColor = false;
+            this.buttonMultiply.Click += new System.EventHandler(this.operatorButton_Click);
             // 
             // buttonNum9
             // 
@@ -333,7 +337,6 @@ namespace RPNCalc
             this.buttonNum9.TabIndex = 6;
             this.buttonNum9.Text = "9";
             this.buttonNum9.UseVisualStyleBackColor = false;
-            this.buttonNum9.Click += new System.EventHandler(this.numButton_Click);
             // 
             // buttonNum8
             // 
@@ -367,21 +370,22 @@ namespace RPNCalc
             this.buttonNum7.UseVisualStyleBackColor = false;
             this.buttonNum7.Click += new System.EventHandler(this.numButton_Click);
             // 
-            // buttonDivision
+            // buttonDivide
             // 
-            this.buttonDivision.AutoSize = true;
-            this.buttonDivision.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.buttonDivision.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDivision.FlatAppearance.BorderSize = 0;
-            this.buttonDivision.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDivision.ForeColor = System.Drawing.Color.White;
-            this.buttonDivision.Location = new System.Drawing.Point(255, 3);
-            this.buttonDivision.Name = "buttonDivision";
-            this.buttonDivision.Size = new System.Drawing.Size(80, 63);
-            this.buttonDivision.TabIndex = 3;
-            this.buttonDivision.Text = "/";
-            this.buttonDivision.UseVisualStyleBackColor = false;
+            this.buttonDivide.AutoSize = true;
+            this.buttonDivide.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.buttonDivide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDivide.FlatAppearance.BorderSize = 0;
+            this.buttonDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDivide.ForeColor = System.Drawing.Color.White;
+            this.buttonDivide.Location = new System.Drawing.Point(255, 3);
+            this.buttonDivide.Name = "buttonDivide";
+            this.buttonDivide.Size = new System.Drawing.Size(80, 63);
+            this.buttonDivide.TabIndex = 3;
+            this.buttonDivide.Text = "/";
+            this.buttonDivide.UseVisualStyleBackColor = false;
+            this.buttonDivide.Click += new System.EventHandler(this.operatorButton_Click);
             // 
             // button3
             // 
@@ -453,7 +457,7 @@ namespace RPNCalc
             this.listBoxRowsValues.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxRowsValues.FormattingEnabled = true;
             this.listBoxRowsValues.ItemHeight = 22;
-            this.listBoxRowsValues.Location = new System.Drawing.Point(72, 3);
+            this.listBoxRowsValues.Location = new System.Drawing.Point(73, 3);
             this.listBoxRowsValues.Name = "listBoxRowsValues";
             this.listBoxRowsValues.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.listBoxRowsValues.Size = new System.Drawing.Size(263, 235);
@@ -480,7 +484,7 @@ namespace RPNCalc
             this.listBoxRowsNum.Location = new System.Drawing.Point(3, 3);
             this.listBoxRowsNum.Name = "listBoxRowsNum";
             this.listBoxRowsNum.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBoxRowsNum.Size = new System.Drawing.Size(63, 235);
+            this.listBoxRowsNum.Size = new System.Drawing.Size(64, 235);
             this.listBoxRowsNum.TabIndex = 2;
             // 
             // FormMainCalc
@@ -495,7 +499,6 @@ namespace RPNCalc
             this.MinimumSize = new System.Drawing.Size(360, 640);
             this.Name = "FormMainCalc";
             this.Text = "RPN Calculator";
-            this.Load += new System.EventHandler(this.FormMainCalc_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormMainCalc_KeyPress);
             this.tableLayoutPanelMain.ResumeLayout(false);
             this.tableLayoutPanelKeys.ResumeLayout(false);
@@ -519,7 +522,7 @@ namespace RPNCalc
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonNum0;
         private System.Windows.Forms.Button buttonComma;
-        private System.Windows.Forms.Button buttonSum;
+        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonNum3;
         private System.Windows.Forms.Button buttonNum2;
         private System.Windows.Forms.Button buttonNum1;
@@ -527,11 +530,11 @@ namespace RPNCalc
         private System.Windows.Forms.Button buttonNum6;
         private System.Windows.Forms.Button buttonNum5;
         private System.Windows.Forms.Button buttonNum4;
-        private System.Windows.Forms.Button buttonMultiplicator;
+        private System.Windows.Forms.Button buttonMultiply;
         private System.Windows.Forms.Button buttonNum9;
         private System.Windows.Forms.Button buttonNum8;
         private System.Windows.Forms.Button buttonNum7;
-        private System.Windows.Forms.Button buttonDivision;
+        private System.Windows.Forms.Button buttonDivide;
     }
 }
 

@@ -117,11 +117,12 @@ namespace RPNCalc
             // buttonEnter
             // 
             this.buttonEnter.AutoSize = true;
-            this.buttonEnter.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(255)))), ((int)(((byte)(92)))));
             this.buttonEnter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEnter.FlatAppearance.BorderSize = 0;
             this.buttonEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEnter.ForeColor = System.Drawing.Color.White;
+            this.buttonEnter.ForeColor = System.Drawing.Color.Black;
             this.buttonEnter.Location = new System.Drawing.Point(255, 279);
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(80, 66);
@@ -133,11 +134,12 @@ namespace RPNCalc
             // buttonClear
             // 
             this.buttonClear.AutoSize = true;
-            this.buttonClear.BackColor = System.Drawing.Color.OrangeRed;
+            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(92)))));
             this.buttonClear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonClear.FlatAppearance.BorderSize = 0;
             this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClear.ForeColor = System.Drawing.Color.White;
+            this.buttonClear.ForeColor = System.Drawing.Color.Black;
             this.buttonClear.Location = new System.Drawing.Point(171, 279);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(78, 66);
@@ -179,7 +181,7 @@ namespace RPNCalc
             // buttonAdd
             // 
             this.buttonAdd.AutoSize = true;
-            this.buttonAdd.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonAdd.FlatAppearance.BorderSize = 0;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -244,7 +246,7 @@ namespace RPNCalc
             // buttonSubtract
             // 
             this.buttonSubtract.AutoSize = true;
-            this.buttonSubtract.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.buttonSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.buttonSubtract.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSubtract.FlatAppearance.BorderSize = 0;
             this.buttonSubtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -309,7 +311,7 @@ namespace RPNCalc
             // buttonMultiply
             // 
             this.buttonMultiply.AutoSize = true;
-            this.buttonMultiply.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.buttonMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.buttonMultiply.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonMultiply.FlatAppearance.BorderSize = 0;
             this.buttonMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -337,6 +339,7 @@ namespace RPNCalc
             this.buttonNum9.TabIndex = 6;
             this.buttonNum9.Text = "9";
             this.buttonNum9.UseVisualStyleBackColor = false;
+            this.buttonNum9.Click += new System.EventHandler(this.numButton_Click);
             // 
             // buttonNum8
             // 
@@ -373,7 +376,7 @@ namespace RPNCalc
             // buttonDivide
             // 
             this.buttonDivide.AutoSize = true;
-            this.buttonDivide.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.buttonDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.buttonDivide.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonDivide.FlatAppearance.BorderSize = 0;
             this.buttonDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
